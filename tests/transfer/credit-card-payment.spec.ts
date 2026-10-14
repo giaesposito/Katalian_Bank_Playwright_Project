@@ -64,7 +64,7 @@ test.describe('Balance transfer — credit card payments', () => {
     await transfer.review();
     await transfer.expectOnConfirmation();
     await expect(transfer.authorizeButton).toHaveText('Authorize Payment');
-    await expect(transfer.confirmAmount).toHaveText('$25.00');
+    await expect(transfer.confirmAmount).toHaveText('$25.000');
     await transfer.authorize();
 
     // Card balance is debt, so a payment SUBTRACTS from it.
